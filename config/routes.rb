@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  map.root :controller => 'homepage', :action => :index
+	root 'homepage#index'
 end
