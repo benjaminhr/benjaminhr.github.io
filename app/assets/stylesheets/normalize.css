@@ -6,6 +6,10 @@
  *    user zoom.
  */
 
+/** {
+    background: url("/assets/background.png") no-repeat;
+}
+*/
 html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
