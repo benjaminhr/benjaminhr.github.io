@@ -28,6 +28,20 @@
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.bounce .1{
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+
+.bounce .2{
+  animation-duration: 1s;
+  animation-delay: 3s;
+}
+
+.bounce .3{
+  animation-duration: 1s;
+  animation-delay: 5s;
+}
 
 .container {
   position: relative;
