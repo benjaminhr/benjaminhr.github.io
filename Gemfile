@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 
 gem 'ruby'
 gem 'rails'
-gem 'github-pages', group: :jekyll_plugins
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
