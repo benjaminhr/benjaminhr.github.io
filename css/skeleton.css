@@ -30,8 +30,8 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 #hello_there{
-  position:absolute;
   z-index:1;
+  position:absolute;
   padding-top:20%;
   padding-left:40%;
 }
