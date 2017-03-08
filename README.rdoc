@@ -1,9 +1,0 @@
-== README
-
-Things to consider:
-
-* Ruby version 2.2.1p85
-
-* Rails version 4.2.5.2
-
-* To deploy, simply cd into the directory and `rails server` which should initialise at http://localhost:3000
