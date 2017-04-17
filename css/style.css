@@ -25,3 +25,15 @@ canvas{
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
+
+#hello_there{
+	z-index:1;
+	position:absolute;
+	padding-top:20%;
+	padding-left:40%
+}
+
+#box_radius{
+	border:5px solid #000;
+	background-color:#fff
+}
