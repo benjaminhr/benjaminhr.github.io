@@ -13,6 +13,18 @@ html {
   color:inherit;
 }
 
+@media screen and (max-width: 480px) {
+  .wrapper {
+    min-width: 389px !important;
+    height: 250px;
+    padding: 10px 0px 10px 0px !important;
+  }
+
+  .wrapper h1 {
+    margin: 20px 10px 20px 10px;
+  }
+}
+
 .wrapper {
   position:absolute;
   top:48%;
@@ -29,7 +41,7 @@ html {
 .bird {
   width:90px;
   position:absolute;
-  top:-5%;
+  top:-2%;
   left:63%;
   transform:translate(-50%,-50%) rotate(10deg);
 }
