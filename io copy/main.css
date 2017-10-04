@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
+
+html {
+  font-family: 'Work Sans';
+  user-select:none;
+  background-color:#edf7f6;
+}
+
+.default {
+  text-decoration: inherit;
+  color:inherit;
+}
+
+.wrapper {
+  position:absolute;
+  top:48%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  min-width:350px;
+  padding:20px 60px 60px 60px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background-color:white;
+  border-radius:2px;
+}
+
+.bird {
+  width:90px;
+  position:absolute;
+  top:-5%;
+  left:63%;
+  transform:translate(-50%,-50%) rotate(10deg);
+}
+
+.wrapper h1 {
+  font-size:40px;
+  margin-bottom:20px;
+  font-family:'Libre Baskerville';
+}
+
+.wrapper p {
+  font-size:22px;
+  color:#45677a;
+  margin-top:0px;
+  margin-bottom:20px;
+  font-family:courier;
+}
+
+.wrapper button {
+  height:35px;
+  width:80px;
+  font-family:Courier;
+  border:none;
+  background-color:#45677a;
+  font-size:14px;
+  margin: 0px 5px 0px 10px;
+  color:white;
+  transition: all 250ms ease-in;
+  outline:none;
+  letter-spacing: 0.5px;
+}
+
+.wrapper button:hover {
+  background-color:white;
+  border:2px solid #A6CFE2;
+  color:#A6CFE2;
+  font-weight:bold;
+}
