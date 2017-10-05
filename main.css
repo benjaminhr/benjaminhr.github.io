@@ -5,7 +5,10 @@
 html {
   font-family: 'Work Sans';
   user-select:none;
-  background-color:#edf7f6;
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  height:100%;
+  background-size:cover;
+  background-repeat:no-repeat;
 }
 
 .default {
