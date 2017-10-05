@@ -16,7 +16,7 @@ html {
   color:inherit;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .wrapper {
     min-width: 389px !important;
     height: 250px;
@@ -75,6 +75,7 @@ html {
   transition: all 250ms ease-in;
   outline:none;
   letter-spacing: 0.5px;
+  border-radius:2px;
 }
 
 .wrapper button:hover {
