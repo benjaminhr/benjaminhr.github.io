@@ -76,6 +76,7 @@ html {
   outline:none;
   letter-spacing: 0.5px;
   border-radius:2px;
+  cursor:pointer;
 }
 
 .wrapper button:hover {
