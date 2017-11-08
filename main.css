@@ -52,7 +52,9 @@ html {
 .wrapper h1 {
   font-size:40px;
   margin-bottom:20px;
-  font-family:'Libre Baskerville';
+  /*font-family:'Libre Baskerville';*/
+  font-family:courier;
+  font-weight:normal;
 }
 
 .wrapper p {
