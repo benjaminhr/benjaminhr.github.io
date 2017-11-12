@@ -18,7 +18,6 @@ html {
 
 @media screen and (max-width: 500px) {
   .wrapper {
-    min-width: 389px !important;
     height: 250px;
     padding: 10px 0px 10px 0px !important;
   }
