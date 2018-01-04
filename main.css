@@ -74,7 +74,7 @@ p {
 .buttons {
   display:flex;
   justify-content: center;
-  margin-top:40px;
+  margin-top:30px;
 }
 
 .buttons button {
