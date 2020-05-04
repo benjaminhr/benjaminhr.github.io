@@ -56,16 +56,15 @@ p, h1 {
 @media screen and (max-width: 850px) {
   .text {
     flex-direction: column !important;
-    justify-content: space-between !important;
-    height: 58vh;
-    top: 21% !important;
+    justify-content: space-around !important;
+    height: 100vh;
+    top: 0% !important;
     font-size: 18px !important;
   }
 
   #name {
     margin-left: 0 !important;
     text-align: center !important;
-    /* margin-top: -30px; */
   }
 
   #name .buttons {
@@ -74,7 +73,6 @@ p, h1 {
 
   #desc {
     text-align: center !important;
-    /* margin-bottom: -30px; */
   }
 }
 
