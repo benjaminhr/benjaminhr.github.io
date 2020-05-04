@@ -2,6 +2,7 @@ html, body {
   height: 100%;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 a {
@@ -56,22 +57,29 @@ p, h1 {
   .text {
     flex-direction: column !important;
     justify-content: space-between !important;
+    height: 58vh;
+    top: 21% !important;
+    font-size: 18px !important;
   }
 
   #name {
     margin-left: 0 !important;
     text-align: center !important;
-    margin-top: -30px;
+    /* margin-top: -30px; */
+  }
+
+  #name .buttons {
+    padding-top: 5px;
   }
 
   #desc {
     text-align: center !important;
-    margin-bottom: -30px;
+    /* margin-bottom: -30px; */
   }
 }
 
 @media (pointer:none), (pointer:coarse) {
-  
+
 }
 
 .text {
@@ -80,10 +88,9 @@ p, h1 {
   font-weight: bold;
   color: white;
   position: absolute;
-  top: 23%;
+  top: 41%;
   z-index:999;
   width: 100vw;
-  height: 500px;
   text-align: center;  
   display: flex;
   flex-direction: row;
