@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  background-color: rgb(14, 52, 64);
+  background-color: black;
 }
 
 a {
@@ -114,6 +114,7 @@ p, h1 {
   font-size:20px;
   border-radius: 2px;
   transition: all 100ms ease-in-out;
+  background-color: white;
 }
 
 .buttons button:hover {
