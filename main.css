@@ -1,50 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700,900');
 
-@media all and (max-width:800px) {
-  .wrapper {
-    top:35% !important;
-    font-size: 30px !important;
-  }
-
-  #name {
-    margin-bottom:20px !important;
-  }
-
-  .buttons {
-    margin-top:20px !important;
-  }
-
-  .buttons button {
-    height: 45px !important;
-    width: 70px !important;
-    font-size:20px !important;
-    padding: 0px !important;
-  }
-
-  #particles-js {
-    bottom:-5% !important;
-    width:60px !important;
-    height:60px !important;
-  }
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  margin: 0 auto;
+  max-width: 50em;
+  line-height: 1.5;
+  padding: 4em 1em;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.2rem;
 }
 
-@media all and (min-width:800px) {
-  #name {
-    font-size: 45px;
-  }
-  
-  #subtitle {
-    font-size: 50px;
-  }
-}
-
-body {
-  user-select:none;
-}
-
-.default {
-  text-decoration:inherit;
-  color:inherit;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 a:focus {
@@ -55,77 +25,41 @@ button:focus {
   outline:0;
 }
 
-.wrapper {
-  position:absolute;
-  top:40%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  text-align: center;
-  font-size:35px;
-  width:100%;
-}
-
-p {
-  font-family: 'Work Sans', sans-serif;
-  margin:20px;
-}
-
 #name {
-  color:#a1c4fd;
-  margin-bottom:5px;
-}
-
-#subtitle {
-  font-weight:bold;
-  margin-top:5px;
-  margin-bottom:0px;
+  font-weight: 700;
 }
 
 .buttons {
-  display:flex;
-  justify-content: center;
-  margin-top:30px;
+  display: flex;
+  flex-direction: row;
 }
 
 .buttons button {
-  cursor:pointer;
-  margin:10px;
-  height:40px;
-  width:100px;
-  background-color:white;
-  border: 3px solid #a1c4fd;
-  font-family: 'Work Sans', sans-serif;
-  color:#a1c4fd;
-  transition:all 500ms ease;
-  font-size:20px;
-  padding-top:2px;
+  border: 3px solid black;
+  margin-right: 10px;
+  height: 40px;
+  width: 100px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+  background-color: white;
+  margin-top: 20px;
 }
 
 .buttons button:hover {
-  color:black;
-  border-color:black;
+  background-color: black;
+  color: white;
 }
 
-#particles-js {
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  bottom:-2%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  background-color: white;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  border:none;
-  border-radius:50%;
-  padding:25px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);  
+@media all and (max-width:800px) {
+  body {
+    margin-top: -10px;
+    padding: 0px 1em !important;
+    font-size: 1rem !important;
+  }
 
-  /* box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); */
-  transition:all ease 250ms;
-}
-
-#particles-js:hover {
-  box-shadow:none;
+  .buttons button {
+    font-size: 20px !important;
+    height: 40px !important;
+  }
 }

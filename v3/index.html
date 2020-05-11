@@ -11,21 +11,13 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
 </head>
 <body>
-  <div id="body">
-    <h1 id="name">
-      Benjamin Robson
-    </h1>
 
-    <p id="who">
-      Software developer, engineer, designer who loves working on problems at <b>scale</b>.
-      <br><br>
-      Previously at Microsoft Research, Supervisor Cloud, ResQ Club, and AppGyver.
-      <br><br>
-      Currently @ Facebook.
-    </p>
+  <div class="wrapper">
+    <p id='name'>Benjamin Robson</p>
+    <p id='subtitle'>Developer - Tinkerer  - Designer</p>
 
     <div class="buttons">
-      <a href='assets/benjamin_robson_cv.pdf' download>
+      <a class='default' href='assets/benjamin_robson_cv.pdf' download>
         <button>
           <i class="fas fa-file"></i>
         </button>
@@ -43,7 +35,20 @@
         </button>
       </a>
     </div>
+
   </div>
+
+  <script>
+    console.log("%cWhat's up? Like looking at source code? Drop me an email and lets talk more!", "color:#0FA0CE;font-size:20px;")
+  </script>
+
+  <script src="main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script>
+    $('html').ready(function(){
+      $('.wrapper').css('visibility','visible').hide().fadeIn(1000)
+    });
+  </script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -52,6 +57,7 @@
 
     ga('create', 'UA-42441465-2', 'auto');
     ga('send', 'pageview');
+
   </script>
 </body>
 </html>

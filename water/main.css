@@ -77,10 +77,6 @@ p, h1 {
   }
 }
 
-@media (pointer:none), (pointer:coarse) {
-
-}
-
 .text {
   font-family: helvetica;
   font-size: 20px;

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Benjamin</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="icon" type="image/x-icon" href="/assets/bird.png"/>
+  <link rel='apple-touch-icon' href='/assets/bird.png'>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+</head>
+<body>
+  <div id="body">
+    <h1 id="name">Benjamin Robson</h1> 
+    <p id="text">Developer, designer, and tinkerer.</p>
+    <p id="worked-at">
+      Facebook (curr.), Microsoft Research, Supervisor Cloud, Resq Club, AppGyver.
+    </p>
+    <div class="buttons">
+      <a class='default' href='assets/benjamin_robson_cv.pdf' download>
+        <button>
+          <i class="fas fa-file"></i>
+        </button>
+      </a>
+
+      <a class='default' target='_blank' href='https://github.com/benjaminhr'>
+        <button>
+          <i class="fab fa-github"></i>
+        </button>
+      </a>
+
+      <a class='default' href='mailto:benjamin.h.robson@gmail.com'>
+        <button>
+          <i class="fas fa-envelope"></i>
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // thanks to: 
+    // https://jsfiddle.net/tovic/Xcb8d/
+    // for dragging div element
+
+    var selected = null, // Object of the element to be moved
+        x_pos = 0, y_pos = 0, // Stores x & y coordinates of the mouse pointer
+        x_elem = 0, y_elem = 0; // Stores top, left values (edge) of the element
+
+    // Will be called when user starts dragging an element
+    function _drag_init(elem) {
+        // Store the object of the element which needs to be moved
+        selected = elem;
+        x_elem = x_pos - selected.offsetLeft;
+        y_elem = y_pos - selected.offsetTop;
+    }
+
+    // Will be called when user dragging an element
+    function _move_elem(e) {
+        x_pos = document.all ? window.event.clientX : e.pageX;
+        y_pos = document.all ? window.event.clientY : e.pageY;
+        if (selected !== null) {
+            selected.style.left = (x_pos - x_elem) + 'px';
+            selected.style.top = (y_pos - y_elem) + 'px';
+        }
+    }
+
+    // Destroy the object when we are done
+    function _destroy() {
+        selected = null;
+    }
+
+    // Bind the functions...
+    document.getElementById('body').onmousedown = function () {
+        _drag_init(this);
+        return false;
+    };
+
+    document.onmousemove = _move_elem;
+    document.onmouseup = _destroy;
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-42441465-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
