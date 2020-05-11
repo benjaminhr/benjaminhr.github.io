@@ -67,6 +67,10 @@ button:focus {
     font-size: 20px !important;
     height: 40px !important;
   }
+
+  .blinking-cursor {
+    font-size: 22px !important;
+  }
 }
 
 .blinking-cursor {
@@ -88,3 +92,4 @@ button:focus {
     color: black;
   }
 }
+
