@@ -25,6 +25,11 @@ button:focus {
   outline:0;
 }
 
+#body {
+  opacity: 0;
+  transition: opacity 1000ms ease-in;
+}
+
 #name {
   font-weight: 700;
 }
