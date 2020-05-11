@@ -34,6 +34,15 @@ button:focus {
   font-weight: 700;
 }
 
+#who a {
+  transition: all 150ms ease-in-out;
+}
+
+#who a:hover {
+  background-color: black;
+  color: white;
+}
+
 .buttons {
   display: flex;
   flex-direction: row;
