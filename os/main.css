@@ -174,3 +174,31 @@ span {
 h3 {
   margin-top: 0px;
 }
+
+.blinking-cursor {
+  line-height: normal;
+  vertical-align: baseline;
+  font-weight: 100;
+  /* font-size: 26px; */
+  color: #2e3d48;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+#who,
+.link-buttons {
+  margin: 2px;
+}
