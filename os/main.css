@@ -34,17 +34,39 @@ span {
 }
 
 .window {
+  z-index: 1;
   position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -45%);
+  top: 20%;
+  left: 15%;
+  transform: translate(-15%, -20%);
   background: #fff;
-  width: 50vw;
-  height: 50vh;
-  border-bottom-right-radius: 1px;
-  border-bottom-left-radius: 1px;
+  width: 400px;
+  height: 700px;
+  /* border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px; */
   border-radius: 6px;
   box-shadow: 0px 0px 8px #acacac;
+}
+
+.video {
+  width: 500px;
+  height: 375px;
+  left: 82%;
+  top: 27%;
+  transform: translate(-82%, -27%);
+}
+
+.video .content {
+  padding: 0 !important;
+  width: inherit;
+  height: inherit;
+}
+
+.video .content iframe {
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .titlebar {
@@ -113,6 +135,11 @@ span {
   cursor: default;
 }
 
+.closebutton:hover {
+  font-weight: normal;
+  text-decoration: none;
+}
+
 .minimize {
   background: #ffbd4c;
   font-size: 9pt;
@@ -138,6 +165,11 @@ span {
   color: #9a5518;
   visibility: hidden;
   cursor: default;
+}
+
+.minimizebutton:hover {
+  text-decoration: none;
+  font-weight: normal;
 }
 
 .zoom {
@@ -167,8 +199,30 @@ span {
   cursor: default;
 }
 
+.zoombutton:hover {
+  text-decoration: none;
+  font-weight: normal;
+}
+
 .content {
   padding: 10px;
+}
+
+.spaceinvaders {
+  width: 400px;
+  height: 405px;
+  top: 65%;
+  left: 58%;
+}
+
+.spaceinvaders .content iframe {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.spaceinvaders .content {
+  padding: 0px;
 }
 
 h3 {

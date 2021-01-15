@@ -1,12 +1,12 @@
-function dragElement(elmnt) {
+function dragElement(elmntA, elmntB) {
   var pos1 = 0,
     pos2 = 0,
     pos3 = 0,
     pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  if (document.getElementById(elmntA.id + "header")) {
+    document.getElementById(elmntA.id + "header").onmousedown = dragMouseDown;
   } else {
-    elmnt.onmousedown = dragMouseDown;
+    elmntA.onmousedown = dragMouseDown;
   }
 
   function dragMouseDown(e) {
@@ -25,8 +25,8 @@ function dragElement(elmnt) {
     pos2 = pos4 - e.clientY;
     pos3 = e.clientX;
     pos4 = e.clientY;
-    elmnt.style.top = elmnt.offsetTop - pos2 + "px";
-    elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+    elmntB.style.top = elmntB.offsetTop - pos2 + "px";
+    elmntB.style.left = elmntB.offsetLeft - pos1 + "px";
   }
 
   function closeDragElement() {
@@ -35,37 +35,48 @@ function dragElement(elmnt) {
   }
 }
 
-const windowEl = document.querySelector(".window");
-dragElement(windowEl);
+const titleBarEl = document.querySelectorAll(".titlebar");
+const windowEl = document.querySelectorAll(".window");
+const zoomButton = document.querySelectorAll(".zoombutton");
+const closeButton = document.querySelectorAll(".closebutton");
 
-const zoomButton = document.querySelector(".zoombutton");
-let firstClick = true;
-zoomButton.addEventListener("click", () => {
-  if (firstClick) {
-    windowEl.style.height = "99vh";
-    windowEl.style.width = "99vw";
-    windowEl.style.top = "50%";
-    windowEl.style.left = "50%";
-    windowEl.style.transform = "translate(-50%, -50%)";
-    firstClick = false;
-  } else {
-    windowEl.style.height = "50vh";
-    windowEl.style.width = "50vw";
-    windowEl.style.top = "45%";
-    windowEl.style.left = "50%";
-    windowEl.style.transform = "translate(-50%, -45%)";
-    firstClick = true;
-  }
-});
+for (let i = 0; i < titleBarEl.length; i++) {
+  dragElement(titleBarEl[i], windowEl[i]);
+  addZoomClick(zoomButton[i], windowEl[i]);
+  addCloseButtonClick(closeButton[i], windowEl[i]);
+}
 
-const closeButton = document.querySelector(".closebutton");
-closeButton.addEventListener("click", () => {
-  windowEl.style.display = "none";
-});
+function addZoomClick(zoomButton, windowEl) {
+  let firstClick = true;
+  zoomButton.addEventListener("click", () => {
+    windowEl.style.zIndex = "999999";
+    if (firstClick) {
+      windowEl.style.height = "99vh";
+      windowEl.style.width = "99vw";
+      windowEl.style.top = "50%";
+      windowEl.style.left = "50%";
+      windowEl.style.transform = "translate(-50%, -50%)";
+      firstClick = false;
+    } else {
+      windowEl.style.height = "50vh";
+      windowEl.style.width = "50vw";
+      windowEl.style.top = "45%";
+      windowEl.style.left = "50%";
+      windowEl.style.transform = "translate(-50%, -45%)";
+      firstClick = true;
+    }
+  });
+}
+
+function addCloseButtonClick(closeButton, windowEl) {
+  closeButton.addEventListener("click", () => {
+    windowEl.style.display = "none";
+  });
+}
 
 const fileicon = document.querySelector(".fileicon");
 fileicon.addEventListener("click", (event) => {
   if (event.detail === 2) {
-    windowEl.style.display = "block";
+    windowEl[0].style.display = "block";
   }
 });
