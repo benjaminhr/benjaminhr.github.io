@@ -1,3 +1,8 @@
+// let gameClicked = false;
+// document.querySelector("canvas").addEventListener("click", () => {
+//   gameClicked = true;
+// });
+
 /* Simple JavaScript Inheritance
  * By John Resig http://ejohn.org/
  * MIT Licensed.
@@ -844,7 +849,9 @@ function animate() {
   var dt = now - lastTime;
   if (dt > 100) dt = 100;
   // CLICK TO START
-  if (wasKeyPressed(13) && !hasGameStarted) {
+
+  // if (wasKeyPressed(13) && !hasGameStarted) {
+  if (!hasGameStarted) {
     initGame();
     hasGameStarted = true;
   }

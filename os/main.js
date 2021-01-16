@@ -1,3 +1,11 @@
+setTimeout(() => {
+  const welcomeScreen = document.querySelector(".welcomescreen");
+  const computer = document.querySelector(".computer");
+
+  welcomeScreen.style.display = "none";
+  computer.style.display = "block";
+}, 5000);
+
 function dragElement(elmntA, elmntB) {
   var pos1 = 0,
     pos2 = 0,
@@ -44,6 +52,27 @@ for (let i = 0; i < titleBarEl.length; i++) {
   dragElement(titleBarEl[i], windowEl[i]);
   addZoomClick(zoomButton[i], windowEl[i]);
   addCloseButtonClick(closeButton[i], windowEl[i]);
+  addZindexClick(windowEl[i], windowEl);
+}
+
+function addZindexClick(windowElement, allWindowElements) {
+  windowElement.addEventListener("click", (e) => {
+    const changeSiblingZindexes = (el) => {
+      const children = el.parentNode.children;
+
+      for (let i = 0; i < children.length; i++) {
+        const currentChild = children[i];
+
+        if (currentChild.classList.contains("window") && currentChild != el) {
+          console.log("changing zindex" + i);
+          currentChild.style.zIndex = "9";
+        }
+      }
+    };
+
+    changeSiblingZindexes(windowElement);
+    windowElement.style.zIndex = "10";
+  });
 }
 
 function addZoomClick(zoomButton, windowEl) {
@@ -51,9 +80,9 @@ function addZoomClick(zoomButton, windowEl) {
   zoomButton.addEventListener("click", () => {
     windowEl.style.zIndex = "999999";
     if (firstClick) {
-      windowEl.style.height = "99vh";
+      windowEl.style.height = "95vh";
       windowEl.style.width = "99vw";
-      windowEl.style.top = "50%";
+      windowEl.style.top = "48%";
       windowEl.style.left = "50%";
       windowEl.style.transform = "translate(-50%, -50%)";
       firstClick = false;

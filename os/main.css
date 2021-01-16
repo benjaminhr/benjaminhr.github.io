@@ -2,6 +2,8 @@ html {
   background: url("https://images.unsplash.com/photo-1493998704576-fbed7cf7390c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80")
     no-repeat center center fixed;
   background-size: cover;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -9,17 +11,24 @@ body {
   color: #000;
   font-family: HelveticaNeue, "Helvetica Neue", "Lucida Grande", Arial,
     sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 a {
   text-decoration: none;
 }
-a:link,
-a:visited {
-  color: blue;
-}
+
 a:hover {
   text-decoration: underline;
+}
+
+#who a:visited {
+  color: blue;
+}
+
+.link-buttons a:visited {
+  color: blue;
 }
 
 span {
@@ -46,14 +55,16 @@ span {
   border-bottom-left-radius: 1px; */
   border-radius: 6px;
   box-shadow: 0px 0px 8px #acacac;
+  resize: both;
+  overflow: auto;
 }
 
 .video {
+  background-color: black;
   width: 500px;
   height: 375px;
-  left: 82%;
+  left: 64%;
   top: 27%;
-  transform: translate(-82%, -27%);
 }
 
 .video .content {
@@ -138,6 +149,7 @@ span {
 .closebutton:hover {
   font-weight: normal;
   text-decoration: none;
+  color: inherit;
 }
 
 .minimize {
@@ -170,6 +182,7 @@ span {
 .minimizebutton:hover {
   text-decoration: none;
   font-weight: normal;
+  color: inherit;
 }
 
 .zoom {
@@ -211,14 +224,15 @@ span {
 .spaceinvaders {
   width: 400px;
   height: 405px;
-  top: 65%;
-  left: 58%;
+  top: 54%;
+  left: 55%;
 }
 
 .spaceinvaders .content iframe {
   position: absolute;
   height: 100%;
   width: 100%;
+  pointer-events: none;
 }
 
 .spaceinvaders .content {
