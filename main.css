@@ -1,6 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700,900');
+/* @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700,900'); */
+@import url("https://rsms.me/inter/inter.css");
 
-html, body {
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+html,
+body {
   margin: 0;
   padding: 0;
   background-color: white;
@@ -8,7 +20,7 @@ html, body {
   max-width: 50em;
   line-height: 1.5;
   padding: 4em 1em;
-  font-family: 'Work Sans', sans-serif;
+  /* font-family: 'Work Sans', sans-serif; */
   font-size: 1.2rem;
 }
 
@@ -22,7 +34,7 @@ a:focus {
 }
 
 button:focus {
-  outline:0;
+  outline: 0;
 }
 
 #body {
@@ -58,6 +70,7 @@ button:focus {
   transition: all 150ms ease-in-out;
   background-color: white;
   margin-top: 20px;
+  opacity: 0.8;
 }
 
 .buttons button:hover {
@@ -65,7 +78,7 @@ button:focus {
   color: white;
 }
 
-@media all and (max-width:800px) {
+@media all and (max-width: 800px) {
   body {
     margin-top: -10px;
     padding: 0px 1em !important;
@@ -85,7 +98,7 @@ button:focus {
 .blinking-cursor {
   font-weight: 100;
   font-size: 26px;
-  color: #2E3D48;
+  color: #2e3d48;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
   -ms-animation: 1s blink step-end infinite;
@@ -94,11 +107,11 @@ button:focus {
 }
 
 @keyframes blink {
-  from, to {
+  from,
+  to {
     color: transparent;
   }
   50% {
     color: black;
   }
 }
-
