@@ -47,7 +47,7 @@ span {
   position: absolute;
   top: 20%;
   left: 15%;
-  transform: translate(-15%, -20%);
+  /* transform: translate(-15%, -20%);  to make resizing from top left work */ 
   background: #fff;
   width: 400px;
   height: 700px;
