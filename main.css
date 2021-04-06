@@ -91,13 +91,13 @@ button:focus {
   }
 
   .blinking-cursor {
-    font-size: 22px !important;
+    font-size: 17px !important;
   }
 }
 
 .blinking-cursor {
-  font-weight: 100;
-  font-size: 26px;
+  font-weight: bold;
+  font-size: 21px;
   color: #2e3d48;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
