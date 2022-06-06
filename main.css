@@ -1,4 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700,900'); */
 @import url("https://rsms.me/inter/inter.css");
 
 html {
@@ -20,7 +19,6 @@ body {
   max-width: 50em;
   line-height: 1.5;
   padding: 4em 1em;
-  /* font-family: 'Work Sans', sans-serif; */
   font-size: 1.2rem;
 }
 
@@ -71,6 +69,7 @@ button:focus {
   background-color: white;
   margin-top: 20px;
   opacity: 0.8;
+  color: black;
 }
 
 .buttons button:hover {
