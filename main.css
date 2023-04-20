@@ -96,7 +96,7 @@ button:focus {
 }
 
 .blinking-cursor {
-  font-weight: bold;
+  font-weight: 400;
   font-size: 21px;
   color: #2e3d48;
   -webkit-animation: 1s blink step-end infinite;
