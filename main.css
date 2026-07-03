@@ -143,6 +143,7 @@ a:focus {
 
   .pub-thumb {
     width: 100%;
+    max-width: 12em;
     margin-top: 0;
   }
 }
