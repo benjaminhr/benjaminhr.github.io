@@ -136,4 +136,9 @@ a:focus {
     flex-direction: column;
     gap: 1em;
   }
+
+  .pub-thumb {
+    width: 100%;
+    margin-top: 0;
+  }
 }
