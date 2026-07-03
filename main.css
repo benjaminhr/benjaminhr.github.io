@@ -122,7 +122,7 @@ a:focus {
 
   header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 0;
   }
 
@@ -130,6 +130,10 @@ a:focus {
     order: -1;
     width: 7em;
     margin: 0 0 1.5em;
+  }
+
+  header h1 {
+    text-align: center;
   }
 
   .pub {
