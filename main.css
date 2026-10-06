@@ -19,7 +19,7 @@ body {
 }
 
 main {
-  max-width: 38em;
+  max-width: 46em;
   margin: 0 auto;
   padding: 5em 1.25em;
   line-height: 1.6;
@@ -89,13 +89,23 @@ a:focus {
   font-size: 0.9rem;
 }
 
+.pub > div {
+  margin-top: 2px;
+}
+
 .pub-title {
   font-weight: 600;
   margin-bottom: 0.5em;
 }
 
+.pub + .pub {
+  margin-top: 1.5em;
+}
+
 .pub-thumb {
-  width: 7em;
+  width: 10em;
+  max-width: 100%;
+  height: auto;
   flex-shrink: 0;
   border-radius: 4px;
   margin-top: 0.3em;
@@ -142,8 +152,6 @@ a:focus {
   }
 
   .pub-thumb {
-    width: 100%;
-    max-width: 12em;
     margin-top: 0;
   }
 }
